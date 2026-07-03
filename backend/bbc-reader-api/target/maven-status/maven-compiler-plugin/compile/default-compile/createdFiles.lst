@@ -1,1 +1,2 @@
 com\example\bbc_reader_api\BbcReaderApiApplication.class
+com\example\bbc_reader_api\controller\HealthController.class
