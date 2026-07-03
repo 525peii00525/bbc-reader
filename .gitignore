@@ -1,41 +1,62 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ==========================
+# Node.js (Frontend)
+# ==========================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/.turbo/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# ログ
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
 
-# testing
-/coverage
+# 環境変数
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/.env.test.local
 
-# next.js
-/.next/
-/out/
+# ==========================
+# Spring Boot (Backend)
+# ==========================
+backend/target/
+backend/.mvn/
 
-# production
-/build
+# 環境変数
+backend/.env
+backend/application-local.yml
 
-# misc
+# ==========================
+# IDE
+# ==========================
+.vscode/
+.idea/
+*.iml
+
+# ==========================
+# OS
+# ==========================
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+# ==========================
+# Logs
+# ==========================
+*.log
 
-# env files (can opt-in for committing if needed)
-.env*
+# ==========================
+# Claude Code
+# ==========================
 
-# vercel
-.vercel
+# セッションファイルは管理しない
+.claude/
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# ==========================
+# その他
+# ==========================
+coverage/
+dist/
