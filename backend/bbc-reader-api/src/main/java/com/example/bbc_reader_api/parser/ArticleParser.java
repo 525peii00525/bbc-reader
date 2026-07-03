@@ -21,14 +21,16 @@ public class ArticleParser {
     StringBuilder body = new StringBuilder();
 
     for (Element element : textArea.children()) {
-        if (element.tagName().equals("h3")
-                && element.text().equalsIgnoreCase("Vocabulary")) {
-            break;
-        }
 
-        if (element.tagName().equals("p")) {
-            body.append(element.text()).append("\n\n");
-        }
+    String tag = element.tagName();
+
+    if ("h3".equals(tag) && "Vocabulary".equals(element.text())) {
+        break;
+    }
+
+    if ("p".equals(tag) || "h3".equals(tag)) {
+        body.append(element.text()).append("\n\n");
+    }
     }
 
     return body.toString().trim();
