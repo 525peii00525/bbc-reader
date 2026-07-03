@@ -19,9 +19,10 @@ public class ScrapeService {
             Document document = bbcClient.fetch(url);
             // Call the BBC client to scrape the content
             String title = articleParser.extractTitle(document);
+            String body = articleParser.extractBody(document);
         return  new ScrapeResponse(
                 title,
-                document.body().text(),
+                body,
                 null
             );
         } catch (Exception e) {
