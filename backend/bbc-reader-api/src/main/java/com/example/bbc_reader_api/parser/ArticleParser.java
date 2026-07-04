@@ -35,4 +35,14 @@ public class ArticleParser {
 
     return body.toString().trim();
     }
+
+    public String extractAudioUrl(Document document) {
+    Element downloadLink = document.selectFirst("a[href*=episodes/downloads]");
+
+    if (downloadLink == null) {
+        return null;
+    }
+
+    return downloadLink.attr("abs:href");
+    }
 }

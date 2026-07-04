@@ -1,0 +1,21 @@
+info:
+  name: Scrape API
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://localhost:8080/api/scrape
+  body:
+    type: json
+    data: |-
+      {
+        "url": "https://www.bbc.co.uk/learningenglish/english/features/6-minute-english_2026/ep-260625"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

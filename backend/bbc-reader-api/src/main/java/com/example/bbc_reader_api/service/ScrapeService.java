@@ -20,10 +20,11 @@ public class ScrapeService {
             // Call the BBC client to scrape the content
             String title = articleParser.extractTitle(document);
             String body = articleParser.extractBody(document);
+            String audioUrl = articleParser.extractAudioUrl(document);
         return  new ScrapeResponse(
                 title,
                 body,
-                null
+                audioUrl
             );
         } catch (Exception e) {
             throw new RuntimeException("BBCページの取得に失敗しました", e);
